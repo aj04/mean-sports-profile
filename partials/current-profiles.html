@@ -1,0 +1,42 @@
+<div class="container">
+
+    <h2><span class="navbar-text">Current Profiles</span>
+        <span class="navbar-text navbar-right"><a ui-sref="/" class="navbar-link">Create New Profile</a></span>
+    </h2>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Sports</th>
+            <th>Gender</th>
+            <th>Nationality</th>
+            <th>Date of Birth</th>
+            <th>Location</th>
+            <th>Fav Team</th>
+            <th>Charity</th>
+            <th>Interests</th>
+            <th>Facebook</th>
+            <th>Twitter</th>
+            <th>Instagram</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="profile in profiles">
+            <td>{{profile.name}}</td>
+            <td>{{profile.sports}}</td>
+            <td>{{profile.gender}}</td>
+            <td>{{profile.nationality}}</td>
+            <td>{{profile.dob}}</td>
+            <td>{{profile.location}}</td>
+            <td>{{profile.favTeam}}</td>
+            <td>{{profile.charity}}</td>
+            <td>{{profile.interests}}</td>
+            <td>{{profile.facebook}}</td>
+            <td>{{profile.twitter}}</td>
+            <td>{{profile.instagram}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+

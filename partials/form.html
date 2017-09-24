@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h1>Sports Profile</h1>
+    </div>
+</div>
+<form name="multiStepForm" class="form-validation" role="form" novalidate>
+    <div class="animate-switch-container" ng-switch on="stage" ng-class="{forward: direction, backward:!direction}">
+        <div class="animate-switch" ng-switch-default>
+            <!--Basic Info: name, sport, nationality, gender, date of birth-->
+            <div ng-include="'./partials/basic-info.html'"></div>
+        </div>
+        <!--About: description, location, team etc-->
+        <div ng-include="'./partials/about.html'"></div>
+        <!--Social Handles-->
+        <div ng-include="'./partials/social.html'"></div>
+        <!-- Summary and Review -->
+        <div ng-include="'./partials/summary.html'"></div>
+        <!--Submit Message-->
+        <div ng-include="'./partials/submit.html'"></div>
+    </div>
+</form>

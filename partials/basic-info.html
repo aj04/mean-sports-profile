@@ -1,0 +1,73 @@
+<!--Basic Info: name, sport, nationality, gender, date of birth-->
+    <h3><span class="navbar-text">Basic Info</span>
+        <span class="navbar-text navbar-right"><a ui-sref="/profiles" class="navbar-link">Check Current Profiles</a></span>
+    </h3>
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="tb-name">Name:</label>
+                <input type="text" class="form-control" id="tb-name" name="name" ng-maxlength="250" ng-model="formParams.name" required
+                       ng-class="{'input-error': formValidation && multiStepForm.name.$error.required}" >
+                <span ng-show="multiStepForm.name.$error.maxlength">
+                  Max character length reached.
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="tb-sport">Sport:</label>
+                <select multiple class="form-control" id="tb-sport" name="sport" ng-maxlength="250"
+                       ng-model="formParams.sports"
+                       ng-options="sport as sport.sportName for sport in sports"
+                       ng-class="{'input-error': formValidation && multiStepForm.sport.$error.required}"
+                        required>
+                    <option value="">Select Sports</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="tb-gender">Gender:</label>
+                <select class="form-control" id="tb-gender" name="gender" ng-maxlength="250"
+                       ng-model="formParams.gender"
+                       ng-options="gender as gender.genderName for gender in genders"
+                       ng-class="{'input-error': formValidation && multiStepForm.gender.$error.required}"
+                       required>
+                <option value="">Select Gender</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="tb-nationality">Nationality:</label>
+                <input type="text" class="form-control" id="tb-nationality" name="nationality" ng-maxlength="250"
+                       ng-model="formParams.nationality" ng-class="{'input-error': formValidation && multiStepForm.nationality.$error.required}" required>
+                <span ng-show="multiStepForm.nationality.$error.maxlength">
+                  Max character length reached.
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="tb-dob">Date of Birth:</label>
+                <input type="date" class="form-control" id="tb-dob" name="dob"
+                       ng-model="formParams.dob"
+                       ng-class="{'input-error': (formValidation && multiStepForm.dob.$error.required) || dobError}" required>
+                <span ng-show="dobError">
+                  Date of Birth Should be lesser than today.
+                </span>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary" ng-click="next('stage2')">Next</button>

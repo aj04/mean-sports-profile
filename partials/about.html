@@ -1,0 +1,48 @@
+<!--About: description, location, team etc-->
+
+<div class="animate-switch" ng-switch-when="stage2">
+    <h3>Interests</h3>
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="tb-location">Location:</label>
+                <input type="text" class="form-control" id="tb-location" name="location" ng-maxlength="250"
+                       ng-model="formParams.location" ng-class="{'input-error': formValidation && multiStepForm.location.$error.required}"
+                required>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="tb-favTeam">Favourite Teams:</label>
+                <input type="text" class="form-control" id="tb-favTeam" name="favTeam" ng-maxlength="250"
+                       ng-model="formParams.favTeam" ng-class="{'input-error': formValidation && multiStepForm.favTeam.$error.required}"
+                required>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="tb-charity">Charities:</label>
+                <input type="text" class="form-control" id="tb-charity" name="favTeam" ng-maxlength="250"
+                       ng-model="formParams.charity" ng-class="{'input-error': formValidation && multiStepForm.charity.$error.required}"
+                required>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label for="ta-body">Describe Your Interests:</label>
+        <textarea class="form-control" rows="5" id="ta-body" ng-model="formParams.interests"></textarea>
+    </div>
+
+    <button type="button" class="btn btn-info" ng-click="back('stage1')">Back</button>
+    <button type="button" class="btn btn-primary" ng-click="next('stage3')">Next</button>
+</div>

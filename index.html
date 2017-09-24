@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="utf-8">
+
+<!-- CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/darkly/bootstrap.min.css">
+<link rel="stylesheet" href="./styles/style-profile.css">
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- JS -->
+<!-- load angular, nganimate-->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+<script src="app.js"></script>
+<script src="./controllers/formController.js"></script>
+<script src="./controllers/currentProfilesController.js"></script>
+<script src="./services/sportsService.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sports Profile</title>
+
+    <main ng-app="formApp" ng-controller="FormController" ng-cloak>
+        <div class="container">
+           <ui-view></ui-view>
+        </div>
+    </main>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<div class="animate-switch" ng-switch-when="stage3">
+    <h3>Social Handles</h3>
+
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="tb-facebook">Facebook <i class="fa fa-lg fa-facebook-official" aria-hidden="true"></i></label>
+                <input type="text" class="form-control" id="tb-facebook" name="facebook" ng-maxlength="250"
+                       ng-model="formParams.facebook" ng-class="{'input-error': formValidation && multiStepForm.facebook.$error.required}">
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="tb-twitter">Twitter <i class="fa fa-lg fa-twitter-square" aria-hidden="true"></i></i> :</label>
+                <input type="text" class="form-control" id="tb-twitter" name="twitter" ng-maxlength="250"
+                       ng-model="formParams.twitter" ng-class="{'input-error': formValidation && multiStepForm.twitter.$error.required}">
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="tb-instagram">Instagram <i class="fa fa-lg fa-instagram" aria-hidden="true"></i> :</label>
+                <input type="text" class="form-control" id="tb-instagram" name="instagram" ng-maxlength="250"
+                       ng-model="formParams.instagram" ng-class="{'input-error': formValidation && multiStepForm.instagram.$error.required}">
+            </div>
+        </div>
+
+    </div>
+
+    <button type="button" class="btn btn-info" ng-click="back('stage2')">Back</button>
+    <button type="button" class="btn btn-primary" ng-click="next('stage4')">Next</button>
+
+</div>

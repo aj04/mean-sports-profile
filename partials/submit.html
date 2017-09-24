@@ -1,0 +1,18 @@
+<div class="animate-switch" ng-switch-when="success">
+    <div class="success-wrap">
+        <h2 class="confirmation-text">Thank you</h2>
+        <p>Your Profile has been Created.</p>
+        <br>
+        <div><button type="button" class="btn btn-success" ng-click="reset()" >Create Another Profile</button></div>
+        <br>
+        <div><button type="button" class="btn btn-info" ui-sref="/profiles" >Check Current Profiles</button></div>
+    </div>
+</div>
+<div class="animate-switch" ng-switch-when="error" >
+    <div class="error-wrap">
+        <h2 class="confirmation-text">Error</h2>
+        <p>{{responseError}}</p>
+        <p>There was an error when attempting to submit your request.<br>Please try again later.</p>
+        <div><button type="button" class="btn btn-danger" ng-click="reset()" >Try again</button></div>
+    </div>
+</div>

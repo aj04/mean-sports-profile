@@ -1,0 +1,23 @@
+<div class="animate-switch" ng-switch-when="stage4">
+    <h3>Summary</h3>
+    <p>Name: {{formParams.name}}</p>
+    <p>Sport:
+        <span ng-repeat="sp in formParams.sports track by $index">
+            {{sp.sportName}}{{$last ? '' : ', '}}
+        </span>
+
+    </p>
+    <p>Gender: {{formParams.gender.genderName}}</p>
+    <p>Nationality: {{formParams.nationality}}</p>
+    <p>Date of Birth: {{formParams.dob}}</p>
+    <p>Location: {{formParams.location}}</p>
+    <p>Favourite Teams: {{formParams.favTeam}}</p>
+    <p>Charities: {{formParams.charity}}</p>
+    <p>Interests: {{formParams.interests}}</p>
+    <p>Facebook: {{formParams.facebook}}</p>
+    <p>Twitter: {{formParams.twitter}}</p>
+    <p>Instagram: {{formParams.instagram}}</p>
+
+    <button type="button" class="btn btn-info" ng-click="back('stage3')">Back</button>
+    <button type="button" class="btn btn-primary" ng-click="submitForm()">Submit</button>
+</div>
