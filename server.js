@@ -4,13 +4,19 @@
 const express    = require('express');
 const bodyParser = require('body-parser');
 const {ObjectID} = require('mongodb');
-const {mongoose} = require('./db/mongoose');
+const {mongoose} = require('./server/db/mongoose');
 
 const port = process.env.PORT || 3000;
 
-let {SportProfile} = require('./models/sportsProfileModel');
+let {SportProfile} = require('./server/models/sportsProfileModel');
 
 let app = express();
+
+app.use(express.static(__dirname + '/'));
+
+app.get('/', function(req, res) {
+    res.sendFile(__dirname + '/index.html');
+});
 
 app.use(bodyParser.json());
 
