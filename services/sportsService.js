@@ -5,7 +5,7 @@
     .service('SportsServices',['$http', function ($http) {
         var service = this;
 
-        var apiPath = "http://localhost:3000/sportprofile";
+        var apiPath = "https://ajay-sports-profile.herokuapp.com/sportprofile";
         // todo fetch this from Database table
         var sportsList = [
             {sportName: 'Golf'},
