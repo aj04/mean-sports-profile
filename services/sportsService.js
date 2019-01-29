@@ -3,11 +3,11 @@
 
     angular.module('formApp')
     .service('SportsServices',['$http', function ($http) {
-        var service = this;
+        const service = this;
 
-        var apiPath = "https://ajay-sports-profile.herokuapp.com/sportprofile";
+        const apiPath = "https://ajay-sports-profile.herokuapp.com/sportprofile";
         // todo fetch this from Database table
-        var sportsList = [
+        const sportsList = [
             {sportName: 'Golf'},
             {sportName: 'Tennis'},
             {sportName: 'Cricket'},
@@ -73,5 +73,6 @@
         service.getCurrentProfiles = function () {
           return $http.get(apiPath);
         }
+
     }]);
 })();

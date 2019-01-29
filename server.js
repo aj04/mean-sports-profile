@@ -8,7 +8,8 @@ const {mongoose} = require('./server/db/mongoose');
 
 const port = process.env.PORT || 3000;
 
-let {SportProfile} = require('./server/models/sportsProfileModel');
+let { SportProfile } = require('./server/models/sportsProfileModel');
+let { CommentAsianTaste } = require('./server/models/commentsAsianFusionTaste');
 
 let app = express();
 
@@ -45,6 +46,17 @@ app.post('/sportprofile', (request, response)=> {
  */
 app.get('/sportprofile', (req, res) => {
     SportProfile.find().then((docs)=>{
+        res.send({docs});
+    }, (err)=> {
+        res.status(400).send(err);
+    })
+});
+
+/**
+ * Get Request for Route /comments
+ */
+app.get('/comments', (req, res) => {
+    CommentAsianTaste.find().then((docs)=>{
         res.send({docs});
     }, (err)=> {
         res.status(400).send(err);
