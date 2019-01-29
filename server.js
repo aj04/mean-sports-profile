@@ -42,6 +42,18 @@ app.post('/sportprofile', (request, response)=> {
 });
 
 /**
+ * POST Request for /comments
+ */
+app.post('/comment', (request, response)=> {
+    let comment = new CommentAsianTaste(request.body);
+    comment.save().then((docs)=>{
+        response.send(docs);
+    },(err)=>{
+        response.status(400).send(err);
+    })
+});
+
+/**
  * Get Request for Route /sportprofile
  */
 app.get('/sportprofile', (req, res) => {
